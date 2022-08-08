@@ -10,7 +10,7 @@ let user, superUser, activeUserList, userActive;
 //Task '3'
 let arrNumbers = [0, 1, 2, 3];
 let utapau = {
-  "Obi-Wan": "Hello there",
+  Obi_Wan: "Hello there",
   Grievous: "General Kenobi!",
 };
 
