@@ -132,7 +132,7 @@ const allUniqueUsersArray = usersArray.reduce((allUniqueUsers, currentUser) => {
   return allUniqueUsers;
 }, []);
 
-// Task 9 or if friends needs to be included - i commented part of code between task 10 and 11
+// Task 9
 const filteredUsersArray = usersArray.filter((user) => {
   if (Number(user.balance.slice(0, -1)) >= 2000) {
     return user;
@@ -163,48 +163,31 @@ allUsersArray.forEach((element) => {
 });
 // console.log(theRichestUserName);
 
-// const anotherFilteredUsersArray = allUsersArray.filter((user) => {
-//   if (Number(user.balance.slice(0, -1)) >= 2000) {
-//     return user;
-//   }
-// })
-// console.log(anotherFilteredUsersArray)
-
 // Task 11
 const notLoneyUsersArr = usersArray.filter((element) => {
   if (element.friends.length != 0) {
     return element;
   }
 });
+
 notLoneyUsersArr.forEach((element) => {
+  elementFriendsArr = [];
   for (let index = 0; index < notLoneyUsersArr.length; index++) {
     if (element != notLoneyUsersArr[index]) {
-      let friendsNamesArr1 = [];
       element.friends.forEach((friend) => {
-        friendsNamesArr1.push(friend.name);
+        elementFriendsArr.push(friend.name);
       });
-      let friendsNamesArr2 = [];
+      let anotherFriendsArr = [];
       notLoneyUsersArr[index].friends.forEach((friend) => {
-        friendsNamesArr2.push(friend.name);
+        anotherFriendsArr.push(friend.name);
       });
-      let counter = 0;
-      if (friendsNamesArr1.length > friendsNamesArr2.length) {
-        friendsNamesArr1.forEach((friendName) => {
-          if (friendsNamesArr2.includes(friendName)) {
-            ++counter;
-          }
-        });
-      } else {
-        friendsNamesArr2.forEach((friendName) => {
-          if (friendsNamesArr2.includes(friendName)) {
-            ++counter;
-          }
-        });
-      }
-      if (counter != 0) {
-        console.log(
-          `${element.name} have mutual friends ${notLoneyUsersArr[index].name}`
-        );
+      for (let i = 0; i < elementFriendsArr.length; i++) {
+        if (anotherFriendsArr.includes(elementFriendsArr[i])) {
+          console.log(
+            `${element.name} have mutual friend(s) with ${notLoneyUsersArr[index].name}`
+          );
+          break;
+        }
       }
     }
   }
