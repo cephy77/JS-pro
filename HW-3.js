@@ -171,7 +171,7 @@ const notLoneyUsersArr = usersArray.filter((element) => {
 });
 
 notLoneyUsersArr.forEach((element) => {
-  elementFriendsArr = [];
+  let elementFriendsArr = [];
   for (let index = 0; index < notLoneyUsersArr.length; index++) {
     if (element != notLoneyUsersArr[index]) {
       element.friends.forEach((friend) => {
