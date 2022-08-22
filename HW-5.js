@@ -44,7 +44,11 @@ console.log(countVowels("Hello world"));
 
 // Task 4
 function createUser(role, name) {
-  return { role: role, name: name };
+  const userObj = new Object();
+  userObj.role = role;
+  userObj.name = name;
+  return userObj;
+  // or simply  return { role: role, name: name };
 }
 console.log(createUser("admin", "Bob"));
 console.log(createUser("user", "Alice"));
