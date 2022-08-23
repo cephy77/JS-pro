@@ -12,7 +12,7 @@ console.log(doFirstLetterCapital("hello world"));
 // Task 2
 function countStringLengthInArray(arr) {
   return arr.reduce((total, current) => {
-    if (typeof current === "string" && current.length !== 0) {
+    if (typeof current === "string" && current) {
       total.push(current.length);
     }
     return total;
@@ -31,8 +31,9 @@ console.log(countStringLengthInArray(arrayforTask2));
 
 // Task 3
 function countVowels(string) {
-  const vowels = "AaEeIiOoUuYy".split("");
+  const vowels = "aeiouy".split("");
   let counter = 0;
+  string.toLowerCase();
   for (let i = 0; i < string.length; i++) {
     if (vowels.indexOf(string[i]) !== -1) {
       counter++;
@@ -44,11 +45,7 @@ console.log(countVowels("Hello world"));
 
 // Task 4
 function createUser(role, name) {
-  const userObj = new Object();
-  userObj.role = role;
-  userObj.name = name;
-  return userObj;
-  // or simply  return { role: role, name: name };
+  return { role: role, name: name };
 }
 console.log(createUser("admin", "Bob"));
 console.log(createUser("user", "Alice"));
