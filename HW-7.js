@@ -8,13 +8,12 @@
 // "this" get "name" from "user2" object
 
 // Task 2
-class Pet {
-  constructor(name, kind, color) {
-    this.name = name;
-    this.kind = kind;
-    this.color = color;
-  }
+function Pet(name, kind, color) {
+  this.name = name;
+  this.kind = kind;
+  this.color = color;
 }
+
 const dobbyTheElf = new Pet("Dobby", "Elf", "Grey");
 const jakeTheDog = new Pet("Jake", "Dog", "Yellow");
 console.log(dobbyTheElf);
