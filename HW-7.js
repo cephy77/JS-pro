@@ -1,5 +1,5 @@
 // Task 1
-//In console will show:
+//Console will show:
 // 1.Hi I am Bob. "this" will found variable "name" in "user" object.
 // 2.Hi I am undefined. After reassigning function with "this" to the new variable
 // "greetingsFunc". In that case "this" doesnt find object key "name" in new function then goes
