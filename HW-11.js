@@ -21,7 +21,7 @@ function logUserWithDelay(user, timeStr) {
   };
   return setTimeout(() => console.log(user), transferToMs(delay));
 }
-console.log(logUserWithDelay("Patrick Bateman", "1 second 4 seconds"));
+console.log(logUserWithDelay("Patrick Bateman", "1 minute 4 seconds"));
 
 // Task 2
 const swords = {
