@@ -48,7 +48,7 @@ for (let properties in lanos) {
   if (lanos.hasOwnProperty(properties)) {
     console.log(`${properties} is Lanos property`);
   } else {
-    console.log(`${properties} is Lanos property`);
+    console.log(`${properties} is not Lanos property`);
   }
 }
 lanos.startup();
