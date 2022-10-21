@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #EFDDB2;
+        }
+
+        .square {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #1D556F;
+            border-radius: 10px;
+        }
+
+        .square::after {
+            position: absolute;
+            content: "";
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: #288FB4;
+            top: 20px;
+            left: 60px;
+        }
+
+        .square::before {
+            position: absolute;
+            content: "";
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: #288FB4;
+            top: 20px;
+            left: 20px;
+        }
+
+        .hold {
+            opacity: 0.9;
+            /* filter: drop-shadow(1px 20px 20px rgba(0, 0, 0, 0.522)); */
+        }
+    </style>
+    <title>Homework #20</title>
+</head>
+
+<body>
+    <div class="square"></div>
+</body>
+<script src="./script.js"></script>
+
+</html>
