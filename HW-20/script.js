@@ -10,13 +10,10 @@ centerSquare();
 
 square.addEventListener("dblclick", centerSquare);
 square.addEventListener("pointerdown", (event) => {
-  window.addEventListener(
-    "touchmove",
-    (e) => {
-      e.preventDefault();
-    },
-    { passive: false }
-  );
+  function preventDefault(event) {
+    event.preventDefault();
+  }
+  window.addEventListener("touchmove", preventDefault, { passive: false });
   square.classList.add("hold");
   let shiftX = event.clientX - square.getBoundingClientRect().left;
   let shiftY = event.clientY - square.getBoundingClientRect().top;
@@ -50,8 +47,11 @@ square.addEventListener("pointerdown", (event) => {
     moveSquare(event.pageX, event.pageY);
   }
   document.addEventListener("pointermove", onPointerMove);
-  square.addEventListener("pointerup", () => {
+  function unsubscribe() {
     document.removeEventListener("pointermove", onPointerMove);
+    window.removeEventListener("touchmove", preventDefault);
     square.classList.remove("hold");
-  });
+    square.removeEventListener("pointerup", unsubscribe);
+  }
+  square.addEventListener("pointerup", unsubscribe);
 });
