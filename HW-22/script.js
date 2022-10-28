@@ -46,10 +46,7 @@ form.onsubmit = () => {
   } else {
     sessionStorage.setItem(key, value);
   }
-  key = "";
-  value = "";
   createRecord(type, key, value);
-  return false;
 };
 
 const recordBoard = document.querySelector(".recordboard");
