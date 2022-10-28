@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Homework #22</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="">
+            <div class="switcher">
+                <input id="toggle-on" class="toggle toggle-left" name="toggle" value="local" type="radio">
+                <label for="toggle-on" class="btn">Local</label>
+                <input id="toggle-off" class="toggle toggle-right" name="toggle" value="session" type="radio" checked>
+                <label for="toggle-off" class="btn">Session</label>
+            </div>
+            <h1>storage</h1>
+
+            <div class="storage_input">
+                <input name="keyInp" type="text" placeholder="Key">
+                <input name="valueInp" type="text" placeholder="Value">
+                <input type="submit" value="Save">
+            </div>
+        </form>
+        <div class="recordboard">
+
+            <div class="local-block">
+            </div>
+            <div class="session-block">
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
