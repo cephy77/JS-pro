@@ -1,5 +1,4 @@
 const switcher = document.querySelector("input[type=radio]");
-console.log(switcher.checked);
 const form = document.querySelector("form");
 function drawElement(type, element) {
   if (!type === "local") {
@@ -50,7 +49,6 @@ form.onsubmit = () => {
 };
 
 const recordBoard = document.querySelector(".recordboard");
-console.log(recordBoard);
 recordBoard.onclick = (event) => {
   if (event.target.localName === "button") {
     const key = event.target.nextElementSibling.childNodes[1].innerText;
