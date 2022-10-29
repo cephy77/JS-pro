@@ -110,13 +110,13 @@ form{
 }
 .local-block  {
     width: 50%;
-    height: 200px;
+    min-height: 200px;
     background-color: #a3cd9e;
     border-radius: 20px 0 0 20px;
 }
 .session-block {
     width: 50%;
-    height: 200px;
+    min-height: 200px;
     background-color: #529471;
     border-radius: 0 20px 20px 0;
     
@@ -130,6 +130,9 @@ form{
     border-bottom:dashed 0.1px;
     &:first-child {
         margin-top: 20px;
+    }
+    &:last-child {
+        margin-bottom: 20px;
     }
     &>button{
         background-color: #35635b;
