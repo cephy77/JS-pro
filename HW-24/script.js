@@ -2,7 +2,8 @@ import express from "express";
 import fetch from "node-fetch";
 const app = express();
 const port = 4000;
-
+//This is a bit complicated solution.
+//The legality of that action has been negotiated in telegram chat
 app.route("/users").get(async (req, res) => {
   const response = await fetch("https://swapi.dev/api/people");
   const data = await response.json();
