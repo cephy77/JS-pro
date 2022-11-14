@@ -1,0 +1,22 @@
+.gear {
+  position: absolute;
+  height: 40vmin;
+  pointer-events: none;
+  user-select: none;
+  top: calc(50vh - 20vmin);
+  right: calc(50vw - 20vmin);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .gear {
+    animation: Gear-spin infinite 20s linear;
+  }
+}
+@keyframes Gear-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

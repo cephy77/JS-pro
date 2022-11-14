@@ -1,0 +1,6 @@
+@import "./Colors.css";
+.wrapper {
+  min-height: 50vh;
+  width: 100%;
+  background-color: var(--secondary-dark);
+}
