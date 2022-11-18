@@ -9,7 +9,8 @@ function Footer() {
       </div>
       <div className={style.info}>
         Some info that can be useful, but I never pay attention to that. Ah, of
-        cource... All rights reserved
+        cource...
+        <br /> All rights reserved
       </div>
     </footer>
   );
