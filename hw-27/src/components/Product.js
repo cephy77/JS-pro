@@ -7,7 +7,7 @@ function Product(props) {
       <div className={style.name}>
         <h3>{props.name}</h3>
       </div>
-      <div className={style.about}>Three word about this product</div>
+      <div className={style.about}>Three words about this product</div>
       <div className={style.purchase}>
         <p>{props.price}</p>
         <button>Buy</button>
