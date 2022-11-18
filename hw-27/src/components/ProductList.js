@@ -9,6 +9,7 @@ function ProductList(props) {
         name="Product"
         price="100$"
         img="https://picsum.photos/250/250"
+        key={"key" + i}
       />
     );
   }
