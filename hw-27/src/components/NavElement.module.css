@@ -1,0 +1,16 @@
+.element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  width: 150px;
+  height: 100%;
+  font-size: 25px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.element a {
+  text-decoration: none;
+  color: white;
+}

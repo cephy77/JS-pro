@@ -1,0 +1,8 @@
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  width: 100%;
+  background-color: white;
+}

@@ -1,0 +1,36 @@
+.product {
+  width: 250px;
+  border: 2px solid black;
+  margin-bottom: 20px;
+}
+.name {
+  position: relative;
+  top: -15px;
+}
+.name h3 {
+  margin: 0;
+  color: white;
+  background-color: black;
+  max-width: 70%;
+}
+.about {
+  padding-bottom: 10px;
+}
+.purchase {
+  display: flex;
+  height: 30px;
+}
+.purchase p {
+  height: 30px;
+  width: 50%;
+  border-top: 1px solid black;
+  margin: 0;
+  font-size: 20px;
+}
+.purchase button {
+  width: 50%;
+  color: white;
+  background-color: black;
+  border: none;
+  font-size: 20px;
+}

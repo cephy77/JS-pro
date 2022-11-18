@@ -1,0 +1,8 @@
+.pageNav {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  height: 70px;
+  align-items: center;
+}
