@@ -1,0 +1,38 @@
+@import "../common/Colors.module.css";
+.about {
+  padding-top: 70px;
+  height: 350px;
+  background-color: var(--color-main);
+}
+.about h2 {
+  margin: 0 0 20px 20px;
+  font-size: 50px;
+  text-align: left;
+  color: var(--color-light-back);
+}
+.imgntxt {
+  display: flex;
+  max-width: 80vw;
+  justify-content: center;
+  margin: 0 auto;
+}
+.imgntxt img {
+  height: 200px;
+}
+article {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 450px;
+  padding: 0 30px;
+  color: var(--color-light-back);
+}
+article span {
+  display: inline-block;
+  width: 350px;
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 30px;
+  color: var(--color-contrast);
+  background-color: var(--color-dark-back);
+}

@@ -1,0 +1,18 @@
+@import "../common/Colors.module.css";
+.list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+.error p {
+  color: var(--color-contrast);
+  font-size: 30px;
+  padding: 10px;
+  background-color: var(--color-main);
+}
