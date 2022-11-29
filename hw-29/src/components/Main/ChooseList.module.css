@@ -1,0 +1,33 @@
+@import "../helpers/Colors.module.css";
+.chooseList {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  background-color: var(--color-contrast);
+  animation: dropUp 0.5s ease-out;
+}
+.collection {
+  display: flex;
+  justify-content: center;
+  height: 150px;
+}
+.sort_btn {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 120px;
+  height: 50px;
+  border: 0;
+  border-radius: 0 0 0 20px;
+  background-color: var(--color-main);
+  color: var(--color-contrast);
+  font-size: 15px;
+}
+@keyframes dropUp {
+  from {
+    height: 0;
+  }
+  to {
+    height: 250px;
+  }
+}

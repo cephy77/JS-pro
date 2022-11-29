@@ -1,0 +1,18 @@
+@import "../helpers/Colors.module.css";
+.element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-main);
+  border-radius: 20px;
+  width: 100px;
+  padding: 0 10px;
+  height: 75%;
+  font-size: 20px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.element a {
+  text-decoration: none;
+  color: var(--color-contrast);
+}
