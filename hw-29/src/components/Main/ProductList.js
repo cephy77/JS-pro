@@ -76,7 +76,7 @@ class ProductList extends Component {
             this.sortProducts();
           }}
         >
-          {!this.state.sorted ? <>Sort by name</> : <>Sort by ID</>}
+          {!this.state.sorted ? <>A to Z sort</> : <>ID sort</>}
         </button>
         {this.state.products.map((product) => {
           return (
@@ -87,7 +87,7 @@ class ProductList extends Component {
               status={product.status}
               price={product.id * 100}
               id={product.id}
-              onClick={this.props.chooseUser}
+              onClick={this.props.choseUser}
             />
           );
         })}

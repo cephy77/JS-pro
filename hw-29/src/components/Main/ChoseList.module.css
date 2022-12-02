@@ -1,10 +1,10 @@
 @import "../helpers/Colors.module.css";
-.chooseList {
+.choseList {
   position: relative;
-  height: 250px;
+  height: 0px;
   overflow: hidden;
   background-color: var(--color-contrast);
-  animation: dropUp 0.5s ease-out;
+  transition: height 0.5s ease-in;
 }
 .collection {
   display: flex;
@@ -22,12 +22,4 @@
   background-color: var(--color-main);
   color: var(--color-contrast);
   font-size: 15px;
-}
-@keyframes dropUp {
-  from {
-    height: 0;
-  }
-  to {
-    height: 250px;
-  }
 }

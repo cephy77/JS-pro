@@ -9,7 +9,7 @@ function About() {
         <img src={portal} alt="Rick n Morty" />
         <article>
           <span>Rick And Morty</span>I dont event watch this series. Such topic
-          of this page was choosen just because there are API with pictures. And
+          of this page was chosen just because there are API with pictures. And
           I need to type here something.
         </article>
       </div>

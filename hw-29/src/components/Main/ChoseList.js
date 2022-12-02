@@ -1,10 +1,10 @@
-import style from "./ChooseList.module.css";
+import style from "./ChoseList.module.css";
 import Product from "./Product";
 
-function ChooseList(props) {
+function ChoseList(props) {
   return (
-    <div className={style.chooseList}>
-      <h2>Choosen products</h2>
+    <div className={style.choseList} style={{ height: props.height }}>
+      <h2>Chosen products</h2>
       <button
         className={style.sort_btn}
         onClick={() => {
@@ -33,4 +33,4 @@ function ChooseList(props) {
   );
 }
 
-export default ChooseList;
+export default ChoseList;

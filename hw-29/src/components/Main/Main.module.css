@@ -1,5 +1,4 @@
 @import "../helpers/Colors.module.css";
 .main {
-  /* background-color: var(--color-light-back); */
   min-height: calc(100vh - 100px);
 }

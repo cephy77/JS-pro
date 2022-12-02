@@ -1,5 +1,5 @@
 import { Component } from "react";
-import ChooseList from "./ChooseList";
+import ChoseList from "./ChoseList";
 import ProductList from "./ProductList";
 import style from "./Shop.module.css";
 
@@ -7,18 +7,18 @@ class Shop extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      choosedProducts: [],
+      chosedProducts: [],
     };
   }
   clearProducts = () => {
-    this.setState({ choosedProducts: [] });
+    this.setState({ chosedProducts: [] });
   };
-  delChoosedProd = (id) => {
-    const result = this.state.choosedProducts.filter((prod) => prod.id !== id);
-    this.setState({ choosedProducts: result });
+  delChosedProd = (id) => {
+    const result = this.state.chosedProducts.filter((prod) => prod.id !== id);
+    this.setState({ chosedProducts: result });
   };
   changeProdAmmount = (id, sign) => {
-    const result = this.state.choosedProducts.map((prod) => {
+    const result = this.state.chosedProducts.map((prod) => {
       if (prod.id === id) {
         if (sign === "+") {
           prod.ammount += 1;
@@ -29,41 +29,38 @@ class Shop extends Component {
       return prod;
     });
     this.setState({
-      choosedProducts: result,
+      chosedProducts: result,
     });
   };
-  chooseUser = (id, img, name) => {
+  choseUser = (id, img, name) => {
     const product = { id: id, img: img, name: name, ammount: 1 };
-    let result = this.state.choosedProducts;
-    if (!this.state.choosedProducts.length) {
+    let result = this.state.chosedProducts;
+    if (!this.state.chosedProducts.length) {
       result = [product];
     } else if (
-      !this.state.choosedProducts.find((prod) => prod.id === product.id)
+      !this.state.chosedProducts.find((prod) => prod.id === product.id)
     ) {
-      result = [...this.state.choosedProducts, product];
+      result = [...this.state.chosedProducts, product];
     } else {
       this.changeProdAmmount(product.id, "+");
     }
     this.setState({
-      choosedProducts: result,
+      chosedProducts: result,
     });
   };
   render() {
     return (
       <div className={style.shop}>
-        {this.state.choosedProducts.length !== 0 ? (
-          <ChooseList
-            prodArr={this.state.choosedProducts}
-            changeProdAmmount={this.changeProdAmmount}
-            del={this.delChoosedProd}
-            clear={this.clearProducts}
-          />
-        ) : (
-          <></>
-        )}
+        <ChoseList
+          height={this.state.chosedProducts.length !== 0 ? "250px" : "0px"}
+          prodArr={this.state.chosedProducts}
+          changeProdAmmount={this.changeProdAmmount}
+          del={this.delChosedProd}
+          clear={this.clearProducts}
+        />
         <div>
           <h2>Buy our products</h2>
-          <ProductList chooseUser={this.chooseUser} />
+          <ProductList choseUser={this.choseUser} />
         </div>
       </div>
     );
