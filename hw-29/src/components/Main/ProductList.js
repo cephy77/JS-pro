@@ -78,19 +78,17 @@ class ProductList extends Component {
         >
           {!this.state.sorted ? <>A to Z sort</> : <>ID sort</>}
         </button>
-        {this.state.products.map((product) => {
-          return (
-            <Product
-              name={product.name}
-              img={product.image}
-              key={product.id}
-              status={product.status}
-              price={product.id * 100}
-              id={product.id}
-              onClick={this.props.choseUser}
-            />
-          );
-        })}
+        {this.state.products.map((product) => (
+          <Product
+            name={product.name}
+            img={product.image}
+            key={product.id}
+            status={product.status}
+            price={product.id * 100}
+            id={product.id}
+            onClick={this.props.choseUser}
+          />
+        ))}
       </div>
     );
   }

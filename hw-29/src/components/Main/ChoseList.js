@@ -14,20 +14,18 @@ function ChoseList(props) {
         Clear
       </button>
       <div className={style.collection}>
-        {props.prodArr.map((product) => {
-          return (
-            <Product
-              minimise={true}
-              key={product.id}
-              id={product.id}
-              img={product.img}
-              name={product.name}
-              ammount={product.ammount}
-              change={props.changeProdAmmount}
-              del={props.del}
-            />
-          );
-        })}
+        {props.prodArr.map((product) => (
+          <Product
+            minimise={true}
+            key={product.id}
+            id={product.id}
+            img={product.img}
+            name={product.name}
+            ammount={product.ammount}
+            change={props.changeProdAmmount}
+            del={props.del}
+          />
+        ))}
       </div>
     </div>
   );

@@ -8,10 +8,10 @@ function Loader(props) {
 
   return (
     <div className={style.ldsellipsis} style={display}>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+      <div />
+      <div />
+      <div />
+      <div />
     </div>
   );
 }

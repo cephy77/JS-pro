@@ -22,10 +22,7 @@ class LogOutModal extends Component {
           style={{ transform: `translate(${this.state.scaleY})` }}
         >
           <div className={style.modal_header}>Are you still there?</div>
-          <p>
-            We are worry about you <br />
-            Is everything OK?
-          </p>
+          <p>We are worry about you. Is everything OK?</p>
           <button
             onClick={() => {
               this.setState({ scaleY: "0, -70vh", opacity: "0" });
