@@ -1,0 +1,10 @@
+@import "../helpers/Colors.module.css";
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  width: 100%;
+  background-color: var(--color-dark-back);
+  z-index: 5;
+}
