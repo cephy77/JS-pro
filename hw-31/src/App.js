@@ -6,7 +6,7 @@ import Footer from "./components/Footer/Footer";
 import LogOutModal from "./components/common/LogOutModal";
 
 let time;
-const timeout = 300 * 1000;
+const timeout = 30 * 1000;
 
 function App() {
   const [showModal, setShowModal] = useState(false);
