@@ -1,39 +1,35 @@
-import { Component } from "react";
+import { useEffect, useState } from "react";
 import style from "./LogOutModal.module.css";
 
-class LogOutModal extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      scaleY: "0, -70vh",
-      opacity: "0",
-    };
-  }
-  componentDidMount() {
+function LogOutModal(props) {
+  const [inlineStyle, setInlineStyle] = useState({
+    scaleY: "0, -70vh",
+    opacity: "0",
+  });
+  useEffect(() => {
     setTimeout(() => {
-      this.setState({ scaleY: "0,0", opacity: "1" });
+      setInlineStyle({ scaleY: "0,0", opacity: "1" });
     }, 400);
-  }
-  render() {
-    return (
-      <div className={style.screen} style={{ opacity: this.state.opacity }}>
-        <div
-          className={style.modal}
-          style={{ transform: `translate(${this.state.scaleY})` }}
+  }, []);
+
+  return (
+    <div className={style.screen} style={{ opacity: inlineStyle.opacity }}>
+      <div
+        className={style.modal}
+        style={{ transform: `translate(${inlineStyle.scaleY})` }}
+      >
+        <div className={style.modal_header}>Are you still there?</div>
+        <p>We are worry about you. Is everything OK?</p>
+        <button
+          onClick={() => {
+            setInlineStyle({ scaleY: "0, -70vh", opacity: "0" });
+            setTimeout(props.reset, 600);
+          }}
         >
-          <div className={style.modal_header}>Are you still there?</div>
-          <p>We are worry about you. Is everything OK?</p>
-          <button
-            onClick={() => {
-              this.setState({ scaleY: "0, -70vh", opacity: "0" });
-              setTimeout(this.props.reset, 600);
-            }}
-          >
-            Yes, Sir!
-          </button>
-        </div>
+          Yes, Sir!
+        </button>
       </div>
-    );
-  }
+    </div>
+  );
 }
 export default LogOutModal;
