@@ -14,6 +14,7 @@ function Login() {
     ) {
       localStorage.setItem("authorized", true);
       navigate("/");
+      window.location.reload(false);
       return;
     }
   }
