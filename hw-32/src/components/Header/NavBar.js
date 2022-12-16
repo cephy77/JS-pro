@@ -7,11 +7,9 @@ function NavBar() {
   const [authorized, setAuthorized] = useState(() => {
     const storaged = localStorage.getItem("authorized");
     if (storaged) {
-      console.log(JSON.parse(storaged));
       return JSON.parse(storaged);
     }
   });
-
   const navigate = useNavigate();
   function unAuth() {
     localStorage.setItem("authorized", false);

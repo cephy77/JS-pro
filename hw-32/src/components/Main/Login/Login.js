@@ -7,7 +7,7 @@ function Login() {
   const correctUserData = { email: "e@mail.gnome", password: "42" };
   const navigate = useNavigate();
   function handleSubmit(e) {
-    // e.preventDefault();
+    e.preventDefault();
     if (
       userData.email === correctUserData.email &&
       userData.password === correctUserData.password
@@ -16,7 +16,6 @@ function Login() {
       navigate("/");
       return;
     }
-    console.log(userData);
   }
   return (
     <div className={style.login}>
