@@ -1,0 +1,9 @@
+@import "../helpers/Colors.module.css";
+.main {
+  min-height: calc(100vh - 100px);
+}
+.main_content {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}

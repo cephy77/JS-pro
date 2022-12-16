@@ -1,0 +1,43 @@
+@import "../../../helpers/Colors.module.css";
+.choseList {
+  position: relative;
+  height: 0px;
+  overflow: hidden;
+  background-color: var(--color-contrast);
+  transition: height 0.5s ease-in;
+}
+.collection {
+  position: relative;
+  display: flex;
+  height: 150px;
+  max-width: 80vw;
+  margin: 0 auto;
+  overflow-y: hidden;
+  overflow: auto;
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+.flex_scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.clear_btn {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 70px;
+  height: 50px;
+  border: 0;
+  border-radius: 0 0 0 20px;
+  background-color: var(--color-dark-back);
+  color: var(--color-light-back);
+  font-size: 15px;
+}
+@media (max-width: 550px) {
+  .collection {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+}

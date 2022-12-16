@@ -1,0 +1,18 @@
+@import "../../helpers/Colors.module.css";
+.shop {
+  width: 100%;
+  min-height: calc(100vh - 520px);
+  background-color: var(--color-light-back);
+}
+.shop h2 {
+  margin: 0 0 20px 20px;
+  font-size: 50px;
+  text-align: left;
+  color: var(--color-main);
+}
+@media (max-width: 550px) {
+  .shop h2 {
+    margin: 0 0 20px 5px;
+    font-size: 30px;
+  }
+}
