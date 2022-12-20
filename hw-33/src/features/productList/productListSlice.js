@@ -18,33 +18,24 @@ export const productListSlice = createSlice({
   initialState,
   reducers: {
     sort: (state) => {
+      const compareFunc = (a, b) => {
+        if (a < b) {
+          return -1;
+        }
+        if (a > b) {
+          return 1;
+        }
+        return 0;
+      };
       if (!state.sorted) {
         const sortedProd = state.products.map((elm) => elm);
         sortedProd.sort((a, b) => {
-          const nameA = a.name.toUpperCase();
-          const nameB = b.name.toUpperCase();
-          if (nameA < nameB) {
-            return -1;
-          }
-          if (nameA > nameB) {
-            return 1;
-          }
-          return 0;
+          return compareFunc(a.name.toUpperCase(), b.name.toUpperCase());
         });
         state.products = sortedProd;
       } else {
         const unsortedProd = state.products.map((elm) => elm);
-        unsortedProd.sort((a, b) => {
-          const idA = a.id;
-          const idB = b.id;
-          if (idA < idB) {
-            return -1;
-          }
-          if (idA > idB) {
-            return 1;
-          }
-          return 0;
-        });
+        unsortedProd.sort((a, b) => compareFunc(a.id, b.id));
         state.products = unsortedProd;
       }
       state.sorted = !state.sorted;

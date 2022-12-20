@@ -14,6 +14,7 @@ function ProductList(props) {
 
   useEffect(() => {
     dispatch(getUsers());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (products.loading) {
