@@ -9,7 +9,7 @@ function Main() {
   const navigate = useNavigate();
   const isLogin = useSelector((state) => state.isLogin.authorized);
   useEffect(() => {
-    if (isLogin !== null && !isLogin) {
+    if (!isLogin) {
       navigate("login");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

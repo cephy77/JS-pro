@@ -5,18 +5,18 @@ import style from "./NavBar.module.css";
 import NavElement from "./NavElement";
 
 function NavBar() {
-  const authorized = useSelector((state) => state.isLogin);
+  const authorized = useSelector((state) => state.isLogin.authorized);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   function unAuth() {
-    localStorage.setItem("authorized", false);
     dispatch(unauthorize());
     navigate("login");
   }
   return (
     <nav>
       <ul className={style.pageNav}>
-        {authorized.authorized ? (
+        {console.log(authorized)}
+        {authorized ? (
           <NavElement txt="logout" unAuth={unAuth} />
         ) : (
           <NavElement txt="login" />

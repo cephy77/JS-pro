@@ -15,7 +15,6 @@ function Login() {
       userData.email === correctUserData.email &&
       userData.password === correctUserData.password
     ) {
-      localStorage.setItem("authorized", true);
       dispatch(authorize());
       navigate("/");
       return;
