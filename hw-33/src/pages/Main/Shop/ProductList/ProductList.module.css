@@ -1,0 +1,37 @@
+@import "../../../../helpers/Colors.module.css";
+.list {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 40px;
+}
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+.error p {
+  color: var(--color-contrast);
+  font-size: 30px;
+  padding: 10px;
+  background-color: var(--color-main);
+}
+.sort_btn {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 130px;
+  height: 30px;
+  border: 0;
+  border-radius: 0 20px 20px 0;
+  background-color: var(--color-contrast);
+  color: var(--color-main);
+  font-size: 15px;
+}
+@media (max-width: 550px) {
+  .error p {
+    font-size: 25px;
+  }
+}

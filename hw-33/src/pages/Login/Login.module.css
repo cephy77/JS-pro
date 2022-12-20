@@ -1,0 +1,53 @@
+@import "../../helpers/Colors.module.css";
+
+.login {
+  padding-top: 70px;
+  min-height: calc(100vh - 170px);
+  max-width: 1300px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: var(--color-main);
+}
+h2 {
+  margin: 0 0 20px 20px;
+  font-size: 50px;
+  text-align: left;
+  color: var(--color-light-back);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 250px;
+  width: 320px;
+  margin: 0 auto;
+  background-color: var(--color-light-back);
+}
+input {
+  margin-top: 25px;
+  font-size: 20px;
+  font-family: inherit;
+  background-color: inherit;
+  border: 0;
+  border-bottom: 2px solid var(--color-dark-back);
+}
+input[type="email"] {
+  width: 90%;
+  height: 50px;
+  padding: 0;
+  color: var(--color-main);
+}
+input[type="password"] {
+  width: 90%;
+  height: 50px;
+  padding: 0;
+  color: var(--color-main);
+}
+
+input[type="submit"] {
+  width: 90%;
+  height: 50px;
+  background-color: var(--color-contrast);
+  color: var(--color-main);
+  border: 0;
+}
