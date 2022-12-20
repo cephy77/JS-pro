@@ -1,15 +1,14 @@
+import { useEffect } from "react";
+import { Route, Routes, useNavigate, Navigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import Main from "./Main/Main";
 import Login from "./Login/Login";
-import { Route, Routes, useNavigate, Navigate } from "react-router-dom";
-import { useEffect } from "react";
 
 function Page() {
   const navigate = useNavigate();
+  const isLogin = useSelector((state) => state.isLogin);
   useEffect(() => {
-    if (
-      !localStorage.key("authorized") ||
-      localStorage.getItem("authorized") === "false"
-    ) {
+    if (!isLogin.authorized) {
       navigate("login");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

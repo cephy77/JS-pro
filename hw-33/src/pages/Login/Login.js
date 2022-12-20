@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { authorize } from "../../features/isLogin/isLogin";
 import style from "./Login.module.css";
 
 function Login() {
   const [userData, setUserData] = useState({ email: "", password: "" });
   const correctUserData = { email: "e@mail.gnome", password: "42" };
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   function handleSubmit(e) {
     e.preventDefault();
     if (
@@ -13,8 +16,8 @@ function Login() {
       userData.password === correctUserData.password
     ) {
       localStorage.setItem("authorized", true);
+      dispatch(authorize());
       navigate("/");
-      window.location.reload(false);
       return;
     }
   }
