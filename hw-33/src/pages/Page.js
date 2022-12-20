@@ -6,9 +6,9 @@ import Login from "./Login/Login";
 
 function Page() {
   const navigate = useNavigate();
-  const isLogin = useSelector((state) => state.isLogin);
+  const isLogin = useSelector((state) => state.isLogin.authorized);
   useEffect(() => {
-    if (!isLogin.authorized) {
+    if (!isLogin && isLogin !== null) {
       navigate("login");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
