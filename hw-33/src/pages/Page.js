@@ -1,18 +1,8 @@
-import { useEffect } from "react";
-import { Route, Routes, useNavigate, Navigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Main from "./Main/Main";
 import Login from "./Login/Login";
 
 function Page() {
-  const navigate = useNavigate();
-  const isLogin = useSelector((state) => state.isLogin.authorized);
-  useEffect(() => {
-    if (!isLogin && isLogin !== null) {
-      navigate("login");
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
   return (
     <Routes>
       <Route index element={<Main />} />
