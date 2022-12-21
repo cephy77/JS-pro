@@ -1,0 +1,18 @@
+@import "../../helpers/Colors.module.css";
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 140px;
+  text-decoration: none;
+  outline: none;
+}
+.img {
+  width: 30px;
+  height: 30px;
+}
+.txt {
+  font-size: 30px;
+  color: var(--color-light-back);
+}

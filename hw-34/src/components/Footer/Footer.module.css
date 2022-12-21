@@ -1,0 +1,32 @@
+@import "../../helpers/Colors.module.css";
+.footer {
+  display: flex;
+  height: 90px;
+  padding-top: 10px;
+  background-color: var(--color-dark-back);
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 40%;
+  text-align: left;
+  padding-left: 10px;
+}
+.contacts a {
+  text-decoration: none;
+  margin-top: 10px;
+  color: var(--color-light-back);
+}
+.info {
+  width: 60%;
+  margin-top: 10px;
+  padding-right: 10px;
+  color: var(--color-light-back);
+  text-align: right;
+}
+@media (max-width: 550px) {
+  .info {
+    font-size: 12px;
+  }
+}

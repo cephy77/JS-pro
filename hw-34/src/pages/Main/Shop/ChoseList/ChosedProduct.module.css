@@ -1,0 +1,76 @@
+@import "../../../../helpers/Colors.module.css";
+
+.product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--color-main);
+  width: 100px;
+  height: 146px;
+  margin: 0 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+.del_btn {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 0px;
+  padding: 0;
+  background-color: var(--color-dark-back);
+  color: var(--color-light-back);
+  opacity: 0.7;
+}
+.del_btn span {
+  position: absolute;
+  top: -14px;
+  left: -1.5px;
+  font-size: 38px;
+  margin: 0;
+  overflow: hidden;
+}
+.del_btn:hover {
+  opacity: 1;
+}
+.image {
+  width: 100px;
+  height: 100px;
+}
+.name {
+  width: 100px;
+  color: var(--color-contrast);
+  background-color: var(--color-main);
+  height: 21px;
+  overflow: hidden;
+}
+.ammount {
+  display: flex;
+  height: 25px;
+}
+.ammount button {
+  display: inline-block;
+  width: 33.33px;
+  height: 25px;
+  border: 0px;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  background-color: var(--color-dark-back);
+}
+.ammount span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33.33px;
+  height: 25px;
+  font-size: 15px;
+}
+.ammount button:hover {
+  color: var(--color-light-back);
+}
+.ammount button:disabled {
+  background-color: var(--color-main-alpha);
+}
+.ammount button:disabled:hover {
+  color: var(--color-contrast);
+}

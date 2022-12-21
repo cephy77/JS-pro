@@ -1,0 +1,20 @@
+@import "../../helpers/Colors.module.css";
+.element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-main);
+  border-radius: 20px;
+  border: 0;
+  max-width: 65px;
+  padding: 0 10px;
+  height: 75%;
+  font-size: 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  color: var(--color-contrast);
+}
+.element a {
+  text-decoration: none;
+  color: inherit;
+}
