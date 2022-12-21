@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  authorized: JSON.parse(localStorage.getItem("authorized")),
+  authorized: JSON.parse(localStorage.getItem("authorized")) ?? false,
 };
 
 export const isLogin = createSlice({
@@ -20,5 +20,6 @@ export const isLogin = createSlice({
 });
 
 export const { authorize, unauthorize } = isLogin.actions;
+export const selectIsLogin = (state) => state.isLogin.authorized;
 
 export default isLogin.reducer;

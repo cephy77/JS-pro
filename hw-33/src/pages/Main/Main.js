@@ -1,13 +1,14 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { selectIsLogin } from "../../features/isLogin/isLogin";
 import About from "./About/About";
 import style from "./Main.module.css";
 import Shop from "./Shop/Shop";
 
 function Main() {
   const navigate = useNavigate();
-  const isLogin = useSelector((state) => state.isLogin.authorized);
+  const isLogin = useSelector(selectIsLogin);
   useEffect(() => {
     if (!isLogin) {
       navigate("login");

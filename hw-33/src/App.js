@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { unauthorize } from "./features/isLogin/isLogin";
+import { unauthorize, selectIsLogin } from "./features/isLogin/isLogin";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -15,7 +15,7 @@ const timeout = 10 * 60 * 1000;
 function App() {
   const [showModal, setShowModal] = useState(false);
   const dispatch = useDispatch();
-  const isLogin = useSelector((state) => state.isLogin.authorized);
+  const isLogin = useSelector(selectIsLogin);
   useEffect(() => {
     resetTimerIDLE();
     if (isLogin === null) {
