@@ -1,6 +1,7 @@
 @import "../../helpers/Colors.module.css";
 
 .cart {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 100px);
@@ -20,4 +21,22 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 50px;
+  background-color: var(--color-main);
+  color: var(--color-contrast);
+  font-size: 20px;
+}
+.clear {
+  position: absolute;
+  top: 140px;
+  left: 0px;
+  width: 130px;
+  height: 30px;
+  font-size: 15px;
 }

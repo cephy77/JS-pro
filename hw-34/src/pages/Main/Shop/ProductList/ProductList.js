@@ -58,6 +58,7 @@ function ProductList() {
         <Button
           variant="contained"
           color="secondary"
+          disabled={products.products.length ? false : true}
           sx={{ borderRadius: "0 10px 10px 0" }}
           onClick={() => dispatch(sort())}
         >

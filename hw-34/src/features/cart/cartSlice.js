@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  cartList: [],
+  cartList: JSON.parse(sessionStorage.getItem("cart")) || [],
 };
 function adjustAmmount(cart, id, ammount) {
   const index = cart.findIndex((e) => e.id === id);
@@ -31,19 +31,23 @@ export const cartSlice = createSlice({
       } else {
         state.cartList = adjustAmmount(cart, id, 1);
       }
+      sessionStorage.setItem("cart", JSON.stringify(state.cartList));
     },
     deleteItem: (state, action) => {
       const id = action.payload;
       const cart = JSON.parse(JSON.stringify(state.cartList));
       state.cartList = cart.filter((e) => e.id !== id);
+      sessionStorage.setItem("cart", JSON.stringify(state.cartList));
     },
     changeQuantity: (state, action) => {
       const { id, ammount } = action.payload;
       const cart = JSON.parse(JSON.stringify(state.cartList));
       state.cartList = adjustAmmount(cart, id, ammount);
+      sessionStorage.setItem("cart", JSON.stringify(state.cartList));
     },
     clearCart: (state) => {
       state.cartList = [];
+      sessionStorage.setItem("cart", JSON.stringify(state.cartList));
     },
   },
 });
