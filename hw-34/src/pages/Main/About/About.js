@@ -3,7 +3,7 @@ import portal from "../../../assets/portal.png";
 
 function About() {
   return (
-    <div className={style.about}>
+    <div className={style.about} id="About">
       <h2>About Us</h2>
       <div className={style.imgntxt}>
         <img src={portal} alt="Rick n Morty" />

@@ -1,0 +1,23 @@
+@import "../../helpers/Colors.module.css";
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 100px);
+  width: 100%;
+  max-width: 1300px;
+  margin-top: 60px;
+  margin: 0 auto;
+  background-color: var(--color-light-back);
+}
+h2 {
+  margin: 70px 0 20px 20px;
+  font-size: 50px;
+  text-align: left;
+  color: var(--color-main);
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { authorize } from "../../features/isLogin/isLogin";
+import { Button, Input } from "@mui/material";
 import style from "./Login.module.css";
 
 function Login() {
@@ -23,27 +24,39 @@ function Login() {
   return (
     <div className={style.login}>
       <h2>Log In</h2>
-      <form
-        onSubmit={(e) => {
-          handleSubmit(e);
-        }}
-      >
-        <input
-          type="email"
-          placeholder="e@mail.gnome"
-          onChange={(e) => setUserData({ ...userData, email: e.target.value })}
-          value={userData.email}
-        />
-        <input
-          type="password"
-          placeholder="42"
-          onChange={(e) =>
-            setUserData({ ...userData, password: e.target.value })
-          }
-          value={userData.password}
-        />
-        <input type="submit" value="Log In" />
-      </form>
+      <div className={style.form_wrapper}>
+        <form
+          onSubmit={(e) => {
+            handleSubmit(e);
+          }}
+        >
+          <Input
+            type="email"
+            placeholder="e@mail.gnome"
+            value={userData.email}
+            onChange={(e) =>
+              setUserData({ ...userData, email: e.target.value })
+            }
+          />
+          <Input
+            type="password"
+            placeholder="42"
+            onChange={(e) =>
+              setUserData({ ...userData, password: e.target.value })
+            }
+            value={userData.password}
+          />
+          <Button
+            type="submit"
+            variant="contained"
+            size="large"
+            color="secondary"
+            sx={{ borderRadius: 0 }}
+          >
+            Log In
+          </Button>
+        </form>
+      </div>
     </div>
   );
 }

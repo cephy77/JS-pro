@@ -1,0 +1,55 @@
+@import "../../helpers/Colors.module.css";
+
+.product {
+  position: relative;
+  display: flex;
+  border: 2px solid var(--color-main);
+  width: 320px;
+  margin-bottom: 30px;
+}
+.product_img {
+  width: 115px;
+  height: 115px;
+}
+.product_controls {
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+}
+.product_name {
+  display: flex;
+  min-width: 170px;
+  max-width: 170px;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  color: var(--color-contrast);
+  background-color: var(--color-main);
+  font-weight: 900;
+}
+.del_product {
+  display: flex;
+  align-items: center;
+  width: 35px;
+  height: 45px;
+  background-color: var(--color-main);
+}
+.product_adjust {
+  display: flex;
+}
+.adjust_input {
+  width: 73px;
+  border: 0;
+  border-radius: 0;
+  text-align: center;
+  font-family: inherit;
+  background-color: var(--color-light-back);
+}
+.product_price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}

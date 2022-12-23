@@ -2,7 +2,7 @@ import style from "./Footer.module.css";
 import Contact from "./Contact";
 function Footer() {
   return (
-    <footer className={style.footer}>
+    <footer className={style.footer} id="Contacts">
       <div className={style.contacts}>
         <Contact type="email" content="e@mail.gnome" />
         <Contact type="phone" content="+380114206942" />
